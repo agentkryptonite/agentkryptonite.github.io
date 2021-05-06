@@ -1,22 +1,718 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en-US">
     <head>
         <meta charset="utf-8">
         <link href="styles/style.css" rel="stylesheet">
-        <title>EEEEEP</title>
+        <meta name="description" content="blah blah blah this is a webpage for no one">
+        <script src="scripts/main.js" defer></script>
+        
     </head>
     <body>
-        <h1>burp</h1>
-        <p>This is a test <a href="http://www.google.com">website</a> that I am making because I want to get rich now.</p>
-        <ol>
-            <li>whatever</li>
-            <li>and</li>
-            <li>yeah</li>
-        </ol>
-        <p>click on the picture! </p>
-        <button>Click this</button>
-        <img src="images/headshotttt.png" width=500px alt="My test image">
+        <header><h1>Cocktail Quiz 4 Pretty</h1>
+    <main>
+        <label id="current">Click a cocktail</label>
+        <table>
+            <thead>
+                <th>COCKTAIL</th>
+                <th>Glassware</th>
+                <th>Base Spirit</th>
+                <th>Sweetener</th>
+                <th>Citrus</th>
+                <th>Additional Spirit</th>
+                <th>Fruit/Herbs/Other</th>
+                <th>Garnish</th>
+              </thead>
+              <tbody>
+                <tr>
+                    <td><input type="button" id="tea" value="Tea with Harriet" onclick="Tea()"/></td>
+                  <td><input type="button" id="rocks" value="Rocks" onclick="Rocks()"/></td>
+                  <td><input type="button" id="mezcal" value="Mezcal" onclick="Mezcal()"/></td>
+                  <td><input type="button" id="demerara" value="Demerara syrup" onclick="Dem()"/></td>
+                  <td><input type="button" id="Lemon" value="Lemon" onclick="Lemon()"/></td>
+                  <td><input type="button" id="Pama Liqueur" value="Pama Liqueur" onclick="Pama()"/></td>
+                  <td><input type="button" id="Mint leaves" value="Mint leaves" onclick="MintA()"/></td>
+                  <td><input type="button" id="Mint leaf" value="Mint leaf" onclick="MintB()"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="field" value="Hiding in a Field" onclick="Field()"/></td>
+                  <td><input type="button" id="Highball" value="Highball" onclick="Highball()"/></td>
+                  <td><input type="button" id="Johnny Walker Red" value="Johnny Walker Red" onclick="JWR()"/></td>
+                  <td><input type="button" id="Watermelon syrup" value="Watermelon syrup" onclick="WMS()"/></td>
+                  <td><input type="button" id="Lime" value="Lime" onclick="Lime()"/></td>
+                  <td><input type="button" id="Ancho Reyes" value="Ancho Reyes" onclick="AR()"/></td>
+                  <td><input type="button" id="Basil leaves" value="Basil leaves" onclick="BasilA()"/></td>
+                  <td><input type="button" id="Tajin">Tajin</button></td>
+                </tr>
+                <tr>
+                    <td><input type="button" type="button" id="golden" value="Golden Season Highball" onclick="Golden()"/></td>
+                    <td><input type="button" id="coupe" value="Coupe" onclick="Coupe()"/></td>
+                  <td><input type="button" id="Tea Bully Boy Gin" value="Tea Bully Boy Gin" onclick="TGin()"/></td>
+                  <td><input type="button" id="Rosemary syrup" value="Rosemary syrup" onclick="Rosemary()"/></td>
+                  <td></td>
+                  <td><input type="button" id="Mezcal" value="Mezcal" onclick="Mez()"/></td>
+                  <td><input type="button" id="Watermelon chunks" value="Watermelon chunks" onclick="WMC()"/></td>
+                  <td><input type="button" id="Grapefruit twist" value="Grapefruit twist" onclick="Grapefruit()"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="punch" value="Harvest Sun Punch" onclick="Punch()"/></td>
+                  <td><input type="button" id="Snifter" value="Snifter" onclick="Snifter()"/></td>
+                  <td><input type="button" id="Bully Boy Vodka" value="Bully Boy Vodka" onclick="BBV()"/></td>
+                  <td><input type="button" id="Almond syrup" value="Almond syrup" onclick="Almond()"/></td>
+                  <td></td>
+                  <td><input type="button" id="Apricot Liqueur" value="Apricot Liqueur" onclick="Apricot()"/></td>
+                  <td><input type="button" id="Cucumber" value="Cucumber" onclick="Cucumber()"/></td>
+                  <td><input type="button" id="Lemon wheel" value="Lemon wheel" onclick="LemonW()"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" type="button" id="six" value="Six more weeks" onclick="Six()"/></td>
+                    <td></td>
+                    <td><input type="button" id="Demerara Rum 44" value="Demerara Rum 44" onclick="DemRum()"/></td>
+                    <td><input type="button" id="Vanilla bean syrup" value="Vanilla bean syrup" onclick="Vanilla()"/></td>
+                    <td></td>
+                    <td><input type="button" id="Ginger liqueur" value="Ginger Liqueur" onclick="Ginger()"/></td>
+                    <td><input type="button" id="Pineapple chunks" value="Pineapple chunks" onclick="Pineapple()"/></td>
+                    <td><input type="button" id="Rosemary sprig" value="Rosemary sprig" onclick="RoseSprig()"/></td>
+                  </tr>
+                  <tr>
+                    <td><input type="button" type="button" id="pama" value="Pontoosuc Pama" onclick="Pama()"/></td>
+                    <td></td>
+                    <td><input type="button" id="Bully Boy whiskey" value="Bully Boy whiskey" onclick="BBW()"/></td>
+                    <td><input type="button" id="Strawberry syrup" value="Strawberry syrup" onclick="Strawberry()"/></td>
+                    <td></td>
+                    <td><input type="button" id="Allspice dram" value="Allspice dram" onclick="Allspice()"/></td>
+                    <td><input type="button" id="Grapefruit bitters" value="Grapefruit bitters" onclick="GFB()"/></td>
+                    <td><input type="button" id="Basil leaf" value="Basil leaf" onclick="BasilB()"/> </td>
+                  </tr>
+                  <tr>
+                    <td><input type="button" id="cosno" value="Pomegranate Cosnopolitan" onclick="Cosno()"/></td>
+                    <td></td>
+                    <td><input type="button" id="Seedlip 42 (Citrus)" value="Seedlip 42 (Citrus)" onclick="SLC()"/></td>
+                    <td><input type="button" id="Agave syrup" value="Agave syrup" onclick="Agave()"/></td>
+                    <td></td>
+                    <td><input type="button" id="Cointreau" value="Cointreau" onclick="Cointreau()"/></td>
+                    <td><input type="button" id="Angostura bitters" value="Angostura bitters" onclick="Ango()"/></td>
+                    <td><input type="button" id="Orange peel" value="Orange peel" onclick="Orange()"/></td>
+                  </tr>
+                  <tr>
+                    <td><input type="button" type="button" id="spritz" value="Garden Spritz" onclick="Spritz()"/></td>
+                    <td></td>
+                    <td><input type="button" id="Seedlip 108 (Herbal)" value="Seedlip 108 (Herbal)" onclick="SLH()"/></td>
+                    <td><input type="button" id="Luxardo syrup" value="Luxardo syrup" onclick="Luxardo()"/></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="button" id="Orange flower water" value="Orange flower water" onclick="OFW()"/></td>
+                    <td><input type="button" id="Smoking cinnamon" value="Smoking cinnamon" onclick="Cinnamon()"/></td>
+                  </tr>
+                  <tr>
+                    <td><input type="button" id="pina" value="Piña Sabrosa" onclick="Pina()"/></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="button" id="Passion fruit syrup" value="Passion fruit syrup" onclick="Passion()"/></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="button" id="Pomegranate juice" value="Pomegranate juice" onclick="Pom()"/></td>
+                    <td><input type="button" id="Sage leaf" value="Sage leaf" onclick="Sage()"/></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="button" id="Club soda" value="Club soda" onclick="Soda()"/></td>
+                    <td><input type="button" id="Strawberry ice" value="Strawberry ice" onclick="SI()"/></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="button" id="Coconut creme" value="Coconut creme" onclick="Coco()"/></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="button" id="Smoked salt" value="Smoked salt" onclick="SS()"/></td>
+                    <td></td>
+                  </tr>
+
+            
+              </tbody>
+              <script>
+
+var glass = 0;
+var base = 0;
+var cock = 0;
+var citrus = 0;
+var sweet = 0;
+
+function Tea() {
+    cock = 1;
+    glass = 3;
+    base = 3;
+    citrus = 2;
+    sweet = 3;
+    let curr = document.getElementById('current');
+    curr.innerHTML = "TEA WITH HARRIET";
+}
+
+function Field(){
+    cock = 2;
+    glass = 1;
+    base = 6;
+    citrus = 2;
+    sweet = 6;
+    let curr = document.getElementById('current');
+    curr.innerHTML = "HIDING IN A FIELD";
+}
+
+function Golden(){
+    cock = 3;
+    glass = 2;
+    base = 2;
+    citrus = 1;
+    sweet = 2;
+    let curr = document.getElementById('current');
+    curr.innerHTML = "GOLDEN SEASON HIGHBALL";
+}
+
+function Punch(){
+    cock = 4;
+    glass = 2;
+    base = 5;
+    citrus = 2;
+    sweet = 5;
+    let curr = document.getElementById('current');
+    curr.innerHTML = "PONTOOSUC PUNCH";
+}
+
+function Six(){
+    cock = 5;
+    glass = 1;
+    base = 4;
+    citrus = 2;
+    sweet = 4;
+    let curr = document.getElementById('current');
+    curr.innerHTML = "SIX MORE WEEKS";
+}
+
+function Pama(){
+    cock = 6;
+    glass = 1;
+    base = 1;
+    citrus = 1;
+    sweet = 1;
+    let curr = document.getElementById('current');
+    curr.innerHTML = "PONTOOSUC PAMA";
+}
+
+function Cosno(){
+    cock = 7;
+    glass = 3;
+    base = 7;
+    let curr = document.getElementById('current');
+    curr.innerHTML = "COSNOPOLITAN";
+}
+
+function Spritz(){
+    cock = 8;
+    glass = 2;
+    base = 8;
+    let curr = document.getElementById('current');
+    curr.innerHTML = "GARDEN SPRITZ";
+}
+
+function Pina(){
+    cock = 9;
+    glass = 4;
+    let curr = document.getElementById('current');
+    curr.innerHTML = "PIÑA SABROSA";
+
+}
+function Rocks(){
+    if (glass == 1){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Highball(){
+    if (glass == 2){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+function Coupe(){
+    if (glass == 3){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Snifter(){
+    if (glass == 4){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Mezcal(){
+    if (base == 1){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function JWR(){
+    if (base == 2){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function TGin(){
+    if (base == 3){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function BBV(){
+    if (base == 4){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function DemRum(){
+    if (base == 5){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function BBW(){
+    if (base == 6){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function SLC(){
+    if (base == 7){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function SLH(){
+    if (base == 8){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Dem(){
+    if (sweet == 1){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function WMS(){
+    if (sweet == 2){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Rosemary(){
+    if (sweet == 3){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Almond(){
+    if (sweet == 4){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Vanilla(){
+    if (sweet == 5){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Strawberry(){
+    if (sweet == 6){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Agave(){
+    if (sweet == 7){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Luxardo(){
+    if (sweet == 8){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Passion(){
+    if (sweet == 5){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Lemon(){
+    if (citrus == 1){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Lime(){
+    if (citrus == 2){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Pama(){
+    if (cock == 6){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function AR(){
+    if (cock == 6){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Mez(){
+    if (cock == 3){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Apricot(){
+    if (cock == 1){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Ginger(){
+    if (cock == 5){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Allspice(){
+    if (cock == 4){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Cointreau(){
+    if (cock == 2){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function MintA(){
+    if (cock == 3){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function BasilA(){
+    if (cock == 5){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function WMC(){
+    if (cock == 3){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Cucumber(){
+    if (cock == 8){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Pineapple(){
+    if (cock == 9){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function GFB(){
+    if (cock == 2){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Angostura(){
+    if (cock == 3 || cock == 9){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function OFW(){
+    if (cock == 7){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Pom(){
+    if (cock == 7){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Soda(){
+    if (cock == 3 || cock == 2){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Coco(){
+    if (cock == 9){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function SS(){
+    if (cock == 8){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function MintB(){
+    if (cock == 3){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Tajin(){
+    if (cock == 6){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Grapefruit(){
+    if (cock ==6){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function LemonW(){
+    if (cock == 3){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function RoseSprig(){
+    if (cock == 1){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function BasilB(){
+    if (cock == 5){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Orange(){
+    if (cock == 4){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Cinnamon(){
+    if (cock == 4){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function Sage(){
+    if (cock == 2){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+function SI(){
+    if (cock == 2){
+        alert("yes");
+    }
+    else{
+        alert("nope");
+    }
+}
+
+
+
+
+
+
+          
+              </script>
+
+
+
         
-        <script src="scripts/main.js"></script>
-    </body>
 </html>
