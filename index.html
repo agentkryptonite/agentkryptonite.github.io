@@ -44,7 +44,7 @@
                   <td><input type="button" id="Tajin" value="Tajin" onclick="Tajin()"/></td>
                 </tr>
                 <tr>
-                    <td><input type="button" type="button" id="golden" value="Golden Season Highball" onclick="Golden()"/></td>
+                    <td><input type="button" id="golden" value="Golden Season Highball" onclick="Golden()"/></td>
                     <td><input type="button" id="coupe" value="Coupe" onclick="Coupe()"/></td>
                   <td><input type="button" id="Tea Bully Boy Gin" value="Tea Bully Boy Gin" onclick="TGin()"/></td>
                   <td><input type="button" id="Rosemary syrup" value="Rosemary syrup" onclick="Rosemary()"/></td>
@@ -64,7 +64,7 @@
                   <td><input type="button" id="Lemon wheel" value="Lemon wheel" onclick="LemonW()"/></td>
                 </tr>
                 <tr>
-                    <td><input type="button" type="button" id="six" value="Six more weeks" onclick="Six()"/></td>
+                    <td><input type="button" id="six" value="Six more weeks" onclick="Six()"/></td>
                     <td></td>
                     <td><input type="button" id="Demerara Rum 44" value="Demerara Rum 44" onclick="DemRum()"/></td>
                     <td><input type="button" id="Vanilla bean syrup" value="Vanilla bean syrup" onclick="Vanilla()"/></td>
@@ -74,7 +74,7 @@
                     <td><input type="button" id="Rosemary sprig" value="Rosemary sprig" onclick="RoseSprig()"/></td>
                   </tr>
                   <tr>
-                    <td><input type="button" type="button" id="pama" value="Pontoosuc Pama" onclick="Pama()"/></td>
+                    <td><input type="button" id="Pontoosuc" value="Pontoosuc Pama" onclick="Pontoosuc()"/></td>
                     <td></td>
                     <td><input type="button" id="Bully Boy whiskey" value="Bully Boy whiskey" onclick="BBW()"/></td>
                     <td><input type="button" id="Strawberry syrup" value="Strawberry syrup" onclick="Strawberry()"/></td>
@@ -94,7 +94,7 @@
                     <td><input type="button" id="Orange peel" value="Orange peel" onclick="Orange()"/></td>
                   </tr>
                   <tr>
-                    <td><input type="button" type="button" id="spritz" value="Garden Spritz" onclick="Spritz()"/></td>
+                    <td><input type="button" id="spritz" value="Garden Spritz" onclick="Spritz()"/></td>
                     <td></td>
                     <td><input type="button" id="Seedlip 108 (Herbal)" value="Seedlip 108 (Herbal)" onclick="SLH()"/></td>
                     <td><input type="button" id="Luxardo syrup" value="Luxardo syrup" onclick="Luxardo()"/></td>
@@ -153,93 +153,673 @@ var base = 0;
 var cock = 0;
 var citrus = 0;
 var sweet = 0;
+var count = 0;
+var ing = 0;
 
 function Tea() {
+    count = 0;
     cock = 1;
     glass = 3;
     base = 3;
     citrus = 2;
     sweet = 3;
+    ing = 5;
     let curr = document.getElementById('current');
     curr.innerHTML = "TEA WITH HARRIET";
+    document.getElementById('tea').style.background='#CCFFCC';
+    document.getElementById('field').style.background='#FFFFFF';
+    document.getElementById('golden').style.background='#FFFFFF';
+    document.getElementById('punch').style.background='#FFFFFF';
+    document.getElementById('six').style.background='#FFFFFF';
+    document.getElementById('Pontoosuc').style.background='#FFFFFF';
+    document.getElementById('cosno').style.background='#FFFFFF';
+    document.getElementById('spritz').style.background='#FFFFFF';
+    document.getElementById('pina').style.background='#FFFFFF';
+    document.getElementById('rocks').style.background='#FFFFFF';
+    document.getElementById('Highball').style.background='#FFFFFF';
+    document.getElementById('coupe').style.background='#FFFFFF';
+    document.getElementById('Snifter').style.background='#FFFFFF';
+    document.getElementById('mezcal').style.background='#FFFFFF';
+    document.getElementById('Johnny Walker Red').style.background='#FFFFFF';
+    document.getElementById('Tea Bully Boy Gin').style.background='#FFFFFF';
+    document.getElementById('Bully Boy Vodka').style.background='#FFFFFF';
+    document.getElementById('Demerara Rum 44').style.background='#FFFFFF';
+    document.getElementById('Bully Boy whiskey').style.background='#FFFFFF';
+    document.getElementById('Seedlip 42 (Citrus)').style.background='#FFFFFF';
+    document.getElementById('Seedlip 108 (Herbal)').style.background='#FFFFFF';
+    document.getElementById('demerara').style.background='#FFFFFF';
+    document.getElementById('Watermelon syrup').style.background='#FFFFFF';
+    document.getElementById('Rosemary syrup').style.background='#FFFFFF';
+    document.getElementById('Almond syrup').style.background='#FFFFFF';
+    document.getElementById('Vanilla bean syrup').style.background='#FFFFFF';
+    document.getElementById('Strawberry syrup').style.background='#FFFFFF';
+    document.getElementById('Agave syrup').style.background='#FFFFFF';
+    document.getElementById('Luxardo syrup').style.background='#FFFFFF';
+    document.getElementById('Passion fruit syrup').style.background='#FFFFFF';
+    document.getElementById('Lemon').style.background='#FFFFFF';
+    document.getElementById('Lime').style.background='#FFFFFF';
+    document.getElementById('Pama Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ancho Reyes').style.background='#FFFFFF';
+    document.getElementById('Mezcal').style.background='#FFFFFF';
+    document.getElementById('Apricot Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ginger liqueur').style.background='#FFFFFF';
+    document.getElementById('Allspice dram').style.background='#FFFFFF';
+    document.getElementById('Cointreau').style.background='#FFFFFF';
+    document.getElementById('Mint leaves').style.background='#FFFFFF';
+    document.getElementById('Basil leaves').style.background='#FFFFFF';
+    document.getElementById('Watermelon chunks').style.background='#FFFFFF';
+    document.getElementById('Cucumber').style.background='#FFFFFF';
+    document.getElementById('Pineapple chunks').style.background='#FFFFFF';
+    document.getElementById('Grapefruit bitters').style.background='#FFFFFF';
+    document.getElementById('Angostura bitters').style.background='#FFFFFF';
+    document.getElementById('Orange flower water').style.background='#FFFFFF';
+    document.getElementById('Pomegranate juice').style.background='#FFFFFF';
+    document.getElementById('Club soda').style.background='#FFFFFF';
+    document.getElementById('Coconut creme').style.background='#FFFFFF';
+    document.getElementById('Smoked salt').style.background='#FFFFFF';
+    document.getElementById('Mint leaf').style.background='#FFFFFF';
+    document.getElementById('Tajin').style.background='#FFFFFF';
+    document.getElementById('Grapefruit twist').style.background='#FFFFFF';
+    document.getElementById('Lemon wheel').style.background='#FFFFFF';
+    document.getElementById('Rosemary sprig').style.background='#FFFFFF';
+    document.getElementById('Basil leaf').style.background='#FFFFFF';
+    document.getElementById('Orange peel').style.background='#FFFFFF';
+    document.getElementById('Smoking cinnamon').style.background='#FFFFFF';
+    document.getElementById('Sage leaf').style.background='#FFFFFF';
+    document.getElementById('Strawberry ice').style.background='#FFFFFF';
+
 }
 
 function Field(){
+    count = 0;
     cock = 2;
     glass = 1;
     base = 6;
     citrus = 2;
     sweet = 6;
+    ing = 8;
     let curr = document.getElementById('current');
     curr.innerHTML = "HIDING IN A FIELD";
+    document.getElementById('tea').style.background='#FFFFFF';
+    document.getElementById('field').style.background='#CCFFCC';
+    document.getElementById('golden').style.background='#FFFFFF';
+    document.getElementById('punch').style.background='#FFFFFF';
+    document.getElementById('six').style.background='#FFFFFF';
+    document.getElementById('Pontoosuc').style.background='#FFFFFF';
+    document.getElementById('cosno').style.background='#FFFFFF';
+    document.getElementById('spritz').style.background='#FFFFFF';
+    document.getElementById('pina').style.background='#FFFFFF';
+    document.getElementById('rocks').style.background='#FFFFFF';
+    document.getElementById('Highball').style.background='#FFFFFF';
+    document.getElementById('coupe').style.background='#FFFFFF';
+    document.getElementById('Snifter').style.background='#FFFFFF';
+    document.getElementById('mezcal').style.background='#FFFFFF';
+    document.getElementById('Johnny Walker Red').style.background='#FFFFFF';
+    document.getElementById('Tea Bully Boy Gin').style.background='#FFFFFF';
+    document.getElementById('Bully Boy Vodka').style.background='#FFFFFF';
+    document.getElementById('Demerara Rum 44').style.background='#FFFFFF';
+    document.getElementById('Bully Boy whiskey').style.background='#FFFFFF';
+    document.getElementById('Seedlip 42 (Citrus)').style.background='#FFFFFF';
+    document.getElementById('Seedlip 108 (Herbal)').style.background='#FFFFFF';
+    document.getElementById('demerara').style.background='#FFFFFF';
+    document.getElementById('Watermelon syrup').style.background='#FFFFFF';
+    document.getElementById('Rosemary syrup').style.background='#FFFFFF';
+    document.getElementById('Almond syrup').style.background='#FFFFFF';
+    document.getElementById('Vanilla bean syrup').style.background='#FFFFFF';
+    document.getElementById('Strawberry syrup').style.background='#FFFFFF';
+    document.getElementById('Agave syrup').style.background='#FFFFFF';
+    document.getElementById('Luxardo syrup').style.background='#FFFFFF';
+    document.getElementById('Passion fruit syrup').style.background='#FFFFFF';
+    document.getElementById('Lemon').style.background='#FFFFFF';
+    document.getElementById('Lime').style.background='#FFFFFF';
+    document.getElementById('Pama Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ancho Reyes').style.background='#FFFFFF';
+    document.getElementById('Mezcal').style.background='#FFFFFF';
+    document.getElementById('Apricot Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ginger liqueur').style.background='#FFFFFF';
+    document.getElementById('Allspice dram').style.background='#FFFFFF';
+    document.getElementById('Cointreau').style.background='#FFFFFF';
+    document.getElementById('Mint leaves').style.background='#FFFFFF';
+    document.getElementById('Basil leaves').style.background='#FFFFFF';
+    document.getElementById('Watermelon chunks').style.background='#FFFFFF';
+    document.getElementById('Cucumber').style.background='#FFFFFF';
+    document.getElementById('Pineapple chunks').style.background='#FFFFFF';
+    document.getElementById('Grapefruit bitters').style.background='#FFFFFF';
+    document.getElementById('Angostura bitters').style.background='#FFFFFF';
+    document.getElementById('Orange flower water').style.background='#FFFFFF';
+    document.getElementById('Pomegranate juice').style.background='#FFFFFF';
+    document.getElementById('Club soda').style.background='#FFFFFF';
+    document.getElementById('Coconut creme').style.background='#FFFFFF';
+    document.getElementById('Smoked salt').style.background='#FFFFFF';
+    document.getElementById('Mint leaf').style.background='#FFFFFF';
+    document.getElementById('Tajin').style.background='#FFFFFF';
+    document.getElementById('Grapefruit twist').style.background='#FFFFFF';
+    document.getElementById('Lemon wheel').style.background='#FFFFFF';
+    document.getElementById('Rosemary sprig').style.background='#FFFFFF';
+    document.getElementById('Basil leaf').style.background='#FFFFFF';
+    document.getElementById('Orange peel').style.background='#FFFFFF';
+    document.getElementById('Smoking cinnamon').style.background='#FFFFFF';
+    document.getElementById('Sage leaf').style.background='#FFFFFF';
+    document.getElementById('Strawberry ice').style.background='#FFFFFF';
 }
 
 function Golden(){
+    count = 0;
     cock = 3;
     glass = 2;
     base = 2;
     citrus = 1;
     sweet = 2;
+    ing = 10;
     let curr = document.getElementById('current');
     curr.innerHTML = "GOLDEN SEASON HIGHBALL";
+    document.getElementById('tea').style.background='#FFFFFF';
+    document.getElementById('field').style.background='#FFFFFF';
+    document.getElementById('golden').style.background='#CCFFCC';
+    document.getElementById('punch').style.background='#FFFFFF';
+    document.getElementById('six').style.background='#FFFFFF';
+    document.getElementById('Pontoosuc').style.background='#FFFFFF';
+    document.getElementById('cosno').style.background='#FFFFFF';
+    document.getElementById('spritz').style.background='#FFFFFF';
+    document.getElementById('pina').style.background='#FFFFFF';
+    document.getElementById('rocks').style.background='#FFFFFF';
+    document.getElementById('Highball').style.background='#FFFFFF';
+    document.getElementById('coupe').style.background='#FFFFFF';
+    document.getElementById('Snifter').style.background='#FFFFFF';
+    document.getElementById('mezcal').style.background='#FFFFFF';
+    document.getElementById('Johnny Walker Red').style.background='#FFFFFF';
+    document.getElementById('Tea Bully Boy Gin').style.background='#FFFFFF';
+    document.getElementById('Bully Boy Vodka').style.background='#FFFFFF';
+    document.getElementById('Demerara Rum 44').style.background='#FFFFFF';
+    document.getElementById('Bully Boy whiskey').style.background='#FFFFFF';
+    document.getElementById('Seedlip 42 (Citrus)').style.background='#FFFFFF';
+    document.getElementById('Seedlip 108 (Herbal)').style.background='#FFFFFF';
+    document.getElementById('demerara').style.background='#FFFFFF';
+    document.getElementById('Watermelon syrup').style.background='#FFFFFF';
+    document.getElementById('Rosemary syrup').style.background='#FFFFFF';
+    document.getElementById('Almond syrup').style.background='#FFFFFF';
+    document.getElementById('Vanilla bean syrup').style.background='#FFFFFF';
+    document.getElementById('Strawberry syrup').style.background='#FFFFFF';
+    document.getElementById('Agave syrup').style.background='#FFFFFF';
+    document.getElementById('Luxardo syrup').style.background='#FFFFFF';
+    document.getElementById('Passion fruit syrup').style.background='#FFFFFF';
+    document.getElementById('Lemon').style.background='#FFFFFF';
+    document.getElementById('Lime').style.background='#FFFFFF';
+    document.getElementById('Pama Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ancho Reyes').style.background='#FFFFFF';
+    document.getElementById('Mezcal').style.background='#FFFFFF';
+    document.getElementById('Apricot Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ginger liqueur').style.background='#FFFFFF';
+    document.getElementById('Allspice dram').style.background='#FFFFFF';
+    document.getElementById('Cointreau').style.background='#FFFFFF';
+    document.getElementById('Mint leaves').style.background='#FFFFFF';
+    document.getElementById('Basil leaves').style.background='#FFFFFF';
+    document.getElementById('Watermelon chunks').style.background='#FFFFFF';
+    document.getElementById('Cucumber').style.background='#FFFFFF';
+    document.getElementById('Pineapple chunks').style.background='#FFFFFF';
+    document.getElementById('Grapefruit bitters').style.background='#FFFFFF';
+    document.getElementById('Angostura bitters').style.background='#FFFFFF';
+    document.getElementById('Orange flower water').style.background='#FFFFFF';
+    document.getElementById('Pomegranate juice').style.background='#FFFFFF';
+    document.getElementById('Club soda').style.background='#FFFFFF';
+    document.getElementById('Coconut creme').style.background='#FFFFFF';
+    document.getElementById('Smoked salt').style.background='#FFFFFF';
+    document.getElementById('Mint leaf').style.background='#FFFFFF';
+    document.getElementById('Tajin').style.background='#FFFFFF';
+    document.getElementById('Grapefruit twist').style.background='#FFFFFF';
+    document.getElementById('Lemon wheel').style.background='#FFFFFF';
+    document.getElementById('Rosemary sprig').style.background='#FFFFFF';
+    document.getElementById('Basil leaf').style.background='#FFFFFF';
+    document.getElementById('Orange peel').style.background='#FFFFFF';
+    document.getElementById('Smoking cinnamon').style.background='#FFFFFF';
+    document.getElementById('Sage leaf').style.background='#FFFFFF';
+    document.getElementById('Strawberry ice').style.background='#FFFFFF';
 }
 
 function Punch(){
+    count = 0;
     cock = 4;
     glass = 2;
     base = 5;
     citrus = 2;
     sweet = 5;
+    ing = 7;
     let curr = document.getElementById('current');
-    curr.innerHTML = "PONTOOSUC PUNCH";
+    curr.innerHTML = "HARVEST SUN PUNCH";
+    document.getElementById('tea').style.background='#FFFFFF';
+    document.getElementById('field').style.background='#FFFFFF';
+    document.getElementById('golden').style.background='#FFFFFF';
+    document.getElementById('punch').style.background='#CCFFCC';
+    document.getElementById('six').style.background='#FFFFFF';
+    document.getElementById('Pontoosuc').style.background='#FFFFFF';
+    document.getElementById('cosno').style.background='#FFFFFF';
+    document.getElementById('spritz').style.background='#FFFFFF';
+    document.getElementById('pina').style.background='#FFFFFF';
+    document.getElementById('rocks').style.background='#FFFFFF';
+    document.getElementById('Highball').style.background='#FFFFFF';
+    document.getElementById('coupe').style.background='#FFFFFF';
+    document.getElementById('Snifter').style.background='#FFFFFF';
+    document.getElementById('mezcal').style.background='#FFFFFF';
+    document.getElementById('Johnny Walker Red').style.background='#FFFFFF';
+    document.getElementById('Tea Bully Boy Gin').style.background='#FFFFFF';
+    document.getElementById('Bully Boy Vodka').style.background='#FFFFFF';
+    document.getElementById('Demerara Rum 44').style.background='#FFFFFF';
+    document.getElementById('Bully Boy whiskey').style.background='#FFFFFF';
+    document.getElementById('Seedlip 42 (Citrus)').style.background='#FFFFFF';
+    document.getElementById('Seedlip 108 (Herbal)').style.background='#FFFFFF';
+    document.getElementById('demerara').style.background='#FFFFFF';
+    document.getElementById('Watermelon syrup').style.background='#FFFFFF';
+    document.getElementById('Rosemary syrup').style.background='#FFFFFF';
+    document.getElementById('Almond syrup').style.background='#FFFFFF';
+    document.getElementById('Vanilla bean syrup').style.background='#FFFFFF';
+    document.getElementById('Strawberry syrup').style.background='#FFFFFF';
+    document.getElementById('Agave syrup').style.background='#FFFFFF';
+    document.getElementById('Luxardo syrup').style.background='#FFFFFF';
+    document.getElementById('Passion fruit syrup').style.background='#FFFFFF';
+    document.getElementById('Lemon').style.background='#FFFFFF';
+    document.getElementById('Lime').style.background='#FFFFFF';
+    document.getElementById('Pama Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ancho Reyes').style.background='#FFFFFF';
+    document.getElementById('Mezcal').style.background='#FFFFFF';
+    document.getElementById('Apricot Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ginger liqueur').style.background='#FFFFFF';
+    document.getElementById('Allspice dram').style.background='#FFFFFF';
+    document.getElementById('Cointreau').style.background='#FFFFFF';
+    document.getElementById('Mint leaves').style.background='#FFFFFF';
+    document.getElementById('Basil leaves').style.background='#FFFFFF';
+    document.getElementById('Watermelon chunks').style.background='#FFFFFF';
+    document.getElementById('Cucumber').style.background='#FFFFFF';
+    document.getElementById('Pineapple chunks').style.background='#FFFFFF';
+    document.getElementById('Grapefruit bitters').style.background='#FFFFFF';
+    document.getElementById('Angostura bitters').style.background='#FFFFFF';
+    document.getElementById('Orange flower water').style.background='#FFFFFF';
+    document.getElementById('Pomegranate juice').style.background='#FFFFFF';
+    document.getElementById('Club soda').style.background='#FFFFFF';
+    document.getElementById('Coconut creme').style.background='#FFFFFF';
+    document.getElementById('Smoked salt').style.background='#FFFFFF';
+    document.getElementById('Mint leaf').style.background='#FFFFFF';
+    document.getElementById('Tajin').style.background='#FFFFFF';
+    document.getElementById('Grapefruit twist').style.background='#FFFFFF';
+    document.getElementById('Lemon wheel').style.background='#FFFFFF';
+    document.getElementById('Rosemary sprig').style.background='#FFFFFF';
+    document.getElementById('Basil leaf').style.background='#FFFFFF';
+    document.getElementById('Orange peel').style.background='#FFFFFF';
+    document.getElementById('Smoking cinnamon').style.background='#FFFFFF';
+    document.getElementById('Sage leaf').style.background='#FFFFFF';
+    document.getElementById('Strawberry ice').style.background='#FFFFFF';
 }
 
 function Six(){
+    count = 0;
     cock = 5;
     glass = 1;
     base = 4;
     citrus = 2;
     sweet = 4;
+    ing = 6;
     let curr = document.getElementById('current');
     curr.innerHTML = "SIX MORE WEEKS";
+    document.getElementById('tea').style.background='#FFFFFF';
+    document.getElementById('field').style.background='#FFFFFF';
+    document.getElementById('golden').style.background='#FFFFFF';
+    document.getElementById('punch').style.background='#FFFFFF';
+    document.getElementById('six').style.background='#CCFFCC';
+    document.getElementById('Pontoosuc').style.background='#FFFFFF';
+    document.getElementById('cosno').style.background='#FFFFFF';
+    document.getElementById('spritz').style.background='#FFFFFF';
+    document.getElementById('pina').style.background='#FFFFFF';
+    document.getElementById('rocks').style.background='#FFFFFF';
+    document.getElementById('Highball').style.background='#FFFFFF';
+    document.getElementById('coupe').style.background='#FFFFFF';
+    document.getElementById('Snifter').style.background='#FFFFFF';
+    document.getElementById('mezcal').style.background='#FFFFFF';
+    document.getElementById('Johnny Walker Red').style.background='#FFFFFF';
+    document.getElementById('Tea Bully Boy Gin').style.background='#FFFFFF';
+    document.getElementById('Bully Boy Vodka').style.background='#FFFFFF';
+    document.getElementById('Demerara Rum 44').style.background='#FFFFFF';
+    document.getElementById('Bully Boy whiskey').style.background='#FFFFFF';
+    document.getElementById('Seedlip 42 (Citrus)').style.background='#FFFFFF';
+    document.getElementById('Seedlip 108 (Herbal)').style.background='#FFFFFF';
+    document.getElementById('demerara').style.background='#FFFFFF';
+    document.getElementById('Watermelon syrup').style.background='#FFFFFF';
+    document.getElementById('Rosemary syrup').style.background='#FFFFFF';
+    document.getElementById('Almond syrup').style.background='#FFFFFF';
+    document.getElementById('Vanilla bean syrup').style.background='#FFFFFF';
+    document.getElementById('Strawberry syrup').style.background='#FFFFFF';
+    document.getElementById('Agave syrup').style.background='#FFFFFF';
+    document.getElementById('Luxardo syrup').style.background='#FFFFFF';
+    document.getElementById('Passion fruit syrup').style.background='#FFFFFF';
+    document.getElementById('Lemon').style.background='#FFFFFF';
+    document.getElementById('Lime').style.background='#FFFFFF';
+    document.getElementById('Pama Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ancho Reyes').style.background='#FFFFFF';
+    document.getElementById('Mezcal').style.background='#FFFFFF';
+    document.getElementById('Apricot Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ginger liqueur').style.background='#FFFFFF';
+    document.getElementById('Allspice dram').style.background='#FFFFFF';
+    document.getElementById('Cointreau').style.background='#FFFFFF';
+    document.getElementById('Mint leaves').style.background='#FFFFFF';
+    document.getElementById('Basil leaves').style.background='#FFFFFF';
+    document.getElementById('Watermelon chunks').style.background='#FFFFFF';
+    document.getElementById('Cucumber').style.background='#FFFFFF';
+    document.getElementById('Pineapple chunks').style.background='#FFFFFF';
+    document.getElementById('Grapefruit bitters').style.background='#FFFFFF';
+    document.getElementById('Angostura bitters').style.background='#FFFFFF';
+    document.getElementById('Orange flower water').style.background='#FFFFFF';
+    document.getElementById('Pomegranate juice').style.background='#FFFFFF';
+    document.getElementById('Club soda').style.background='#FFFFFF';
+    document.getElementById('Coconut creme').style.background='#FFFFFF';
+    document.getElementById('Smoked salt').style.background='#FFFFFF';
+    document.getElementById('Mint leaf').style.background='#FFFFFF';
+    document.getElementById('Tajin').style.background='#FFFFFF';
+    document.getElementById('Grapefruit twist').style.background='#FFFFFF';
+    document.getElementById('Lemon wheel').style.background='#FFFFFF';
+    document.getElementById('Rosemary sprig').style.background='#FFFFFF';
+    document.getElementById('Basil leaf').style.background='#FFFFFF';
+    document.getElementById('Orange peel').style.background='#FFFFFF';
+    document.getElementById('Smoking cinnamon').style.background='#FFFFFF';
+    document.getElementById('Sage leaf').style.background='#FFFFFF';
+    document.getElementById('Strawberry ice').style.background='#FFFFFF';
 }
 
-function Pama(){
+function Pontoosuc(){
+    count = 0;
     cock = 6;
     glass = 1;
     base = 1;
     citrus = 1;
     sweet = 1;
+    ing = 7;
     let curr = document.getElementById('current');
     curr.innerHTML = "PONTOOSUC PAMA";
+    document.getElementById('tea').style.background='#FFFFFF';
+    document.getElementById('field').style.background='#FFFFFF';
+    document.getElementById('golden').style.background='#FFFFFF';
+    document.getElementById('punch').style.background='#FFFFFF';
+    document.getElementById('six').style.background='#FFFFFF';
+    document.getElementById('Pontoosuc').style.background='#CCFFCC';
+    document.getElementById('cosno').style.background='#FFFFFF';
+    document.getElementById('spritz').style.background='#FFFFFF';
+    document.getElementById('pina').style.background='#FFFFFF';
+    document.getElementById('rocks').style.background='#FFFFFF';
+    document.getElementById('Highball').style.background='#FFFFFF';
+    document.getElementById('coupe').style.background='#FFFFFF';
+    document.getElementById('Snifter').style.background='#FFFFFF';
+    document.getElementById('mezcal').style.background='#FFFFFF';
+    document.getElementById('Johnny Walker Red').style.background='#FFFFFF';
+    document.getElementById('Tea Bully Boy Gin').style.background='#FFFFFF';
+    document.getElementById('Bully Boy Vodka').style.background='#FFFFFF';
+    document.getElementById('Demerara Rum 44').style.background='#FFFFFF';
+    document.getElementById('Bully Boy whiskey').style.background='#FFFFFF';
+    document.getElementById('Seedlip 42 (Citrus)').style.background='#FFFFFF';
+    document.getElementById('Seedlip 108 (Herbal)').style.background='#FFFFFF';
+    document.getElementById('demerara').style.background='#FFFFFF';
+    document.getElementById('Watermelon syrup').style.background='#FFFFFF';
+    document.getElementById('Rosemary syrup').style.background='#FFFFFF';
+    document.getElementById('Almond syrup').style.background='#FFFFFF';
+    document.getElementById('Vanilla bean syrup').style.background='#FFFFFF';
+    document.getElementById('Strawberry syrup').style.background='#FFFFFF';
+    document.getElementById('Agave syrup').style.background='#FFFFFF';
+    document.getElementById('Luxardo syrup').style.background='#FFFFFF';
+    document.getElementById('Passion fruit syrup').style.background='#FFFFFF';
+    document.getElementById('Lemon').style.background='#FFFFFF';
+    document.getElementById('Lime').style.background='#FFFFFF';
+    document.getElementById('Pama Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ancho Reyes').style.background='#FFFFFF';
+    document.getElementById('Mezcal').style.background='#FFFFFF';
+    document.getElementById('Apricot Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ginger liqueur').style.background='#FFFFFF';
+    document.getElementById('Allspice dram').style.background='#FFFFFF';
+    document.getElementById('Cointreau').style.background='#FFFFFF';
+    document.getElementById('Mint leaves').style.background='#FFFFFF';
+    document.getElementById('Basil leaves').style.background='#FFFFFF';
+    document.getElementById('Watermelon chunks').style.background='#FFFFFF';
+    document.getElementById('Cucumber').style.background='#FFFFFF';
+    document.getElementById('Pineapple chunks').style.background='#FFFFFF';
+    document.getElementById('Grapefruit bitters').style.background='#FFFFFF';
+    document.getElementById('Angostura bitters').style.background='#FFFFFF';
+    document.getElementById('Orange flower water').style.background='#FFFFFF';
+    document.getElementById('Pomegranate juice').style.background='#FFFFFF';
+    document.getElementById('Club soda').style.background='#FFFFFF';
+    document.getElementById('Coconut creme').style.background='#FFFFFF';
+    document.getElementById('Smoked salt').style.background='#FFFFFF';
+    document.getElementById('Mint leaf').style.background='#FFFFFF';
+    document.getElementById('Tajin').style.background='#FFFFFF';
+    document.getElementById('Grapefruit twist').style.background='#FFFFFF';
+    document.getElementById('Lemon wheel').style.background='#FFFFFF';
+    document.getElementById('Rosemary sprig').style.background='#FFFFFF';
+    document.getElementById('Basil leaf').style.background='#FFFFFF';
+    document.getElementById('Orange peel').style.background='#FFFFFF';
+    document.getElementById('Smoking cinnamon').style.background='#FFFFFF';
+    document.getElementById('Sage leaf').style.background='#FFFFFF';
+    document.getElementById('Strawberry ice').style.background='#FFFFFF';
 }
 
 function Cosno(){
+    count = 0;
     cock = 7;
     glass = 3;
     base = 7;
+    sweet = 7;
+    citrus = 2;
+    ing = 5;
     let curr = document.getElementById('current');
     curr.innerHTML = "COSNOPOLITAN";
+    document.getElementById('tea').style.background='#FFFFFF';
+    document.getElementById('field').style.background='#FFFFFF';
+    document.getElementById('golden').style.background='#FFFFFF';
+    document.getElementById('punch').style.background='#FFFFFF';
+    document.getElementById('six').style.background='#FFFFFF';
+    document.getElementById('Pontoosuc').style.background='#FFFFFF';
+    document.getElementById('cosno').style.background='#CCFFCC';
+    document.getElementById('spritz').style.background='#FFFFFF';
+    document.getElementById('pina').style.background='#FFFFFF';
+    document.getElementById('rocks').style.background='#FFFFFF';
+    document.getElementById('Highball').style.background='#FFFFFF';
+    document.getElementById('coupe').style.background='#FFFFFF';
+    document.getElementById('Snifter').style.background='#FFFFFF';
+    document.getElementById('mezcal').style.background='#FFFFFF';
+    document.getElementById('Johnny Walker Red').style.background='#FFFFFF';
+    document.getElementById('Tea Bully Boy Gin').style.background='#FFFFFF';
+    document.getElementById('Bully Boy Vodka').style.background='#FFFFFF';
+    document.getElementById('Demerara Rum 44').style.background='#FFFFFF';
+    document.getElementById('Bully Boy whiskey').style.background='#FFFFFF';
+    document.getElementById('Seedlip 42 (Citrus)').style.background='#FFFFFF';
+    document.getElementById('Seedlip 108 (Herbal)').style.background='#FFFFFF';
+    document.getElementById('demerara').style.background='#FFFFFF';
+    document.getElementById('Watermelon syrup').style.background='#FFFFFF';
+    document.getElementById('Rosemary syrup').style.background='#FFFFFF';
+    document.getElementById('Almond syrup').style.background='#FFFFFF';
+    document.getElementById('Vanilla bean syrup').style.background='#FFFFFF';
+    document.getElementById('Strawberry syrup').style.background='#FFFFFF';
+    document.getElementById('Agave syrup').style.background='#FFFFFF';
+    document.getElementById('Luxardo syrup').style.background='#FFFFFF';
+    document.getElementById('Passion fruit syrup').style.background='#FFFFFF';
+    document.getElementById('Lemon').style.background='#FFFFFF';
+    document.getElementById('Lime').style.background='#FFFFFF';
+    document.getElementById('Pama Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ancho Reyes').style.background='#FFFFFF';
+    document.getElementById('Mezcal').style.background='#FFFFFF';
+    document.getElementById('Apricot Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ginger liqueur').style.background='#FFFFFF';
+    document.getElementById('Allspice dram').style.background='#FFFFFF';
+    document.getElementById('Cointreau').style.background='#FFFFFF';
+    document.getElementById('Mint leaves').style.background='#FFFFFF';
+    document.getElementById('Basil leaves').style.background='#FFFFFF';
+    document.getElementById('Watermelon chunks').style.background='#FFFFFF';
+    document.getElementById('Cucumber').style.background='#FFFFFF';
+    document.getElementById('Pineapple chunks').style.background='#FFFFFF';
+    document.getElementById('Grapefruit bitters').style.background='#FFFFFF';
+    document.getElementById('Angostura bitters').style.background='#FFFFFF';
+    document.getElementById('Orange flower water').style.background='#FFFFFF';
+    document.getElementById('Pomegranate juice').style.background='#FFFFFF';
+    document.getElementById('Club soda').style.background='#FFFFFF';
+    document.getElementById('Coconut creme').style.background='#FFFFFF';
+    document.getElementById('Smoked salt').style.background='#FFFFFF';
+    document.getElementById('Mint leaf').style.background='#FFFFFF';
+    document.getElementById('Tajin').style.background='#FFFFFF';
+    document.getElementById('Grapefruit twist').style.background='#FFFFFF';
+    document.getElementById('Lemon wheel').style.background='#FFFFFF';
+    document.getElementById('Rosemary sprig').style.background='#FFFFFF';
+    document.getElementById('Basil leaf').style.background='#FFFFFF';
+    document.getElementById('Orange peel').style.background='#FFFFFF';
+    document.getElementById('Smoking cinnamon').style.background='#FFFFFF';
+    document.getElementById('Sage leaf').style.background='#FFFFFF';
+    document.getElementById('Strawberry ice').style.background='#FFFFFF';
 }
 
 function Spritz(){
+    count = 0;
     cock = 8;
     glass = 2;
     base = 8;
+    sweet = 3;
+    citrus = 2;
+    ing = 5;
     let curr = document.getElementById('current');
     curr.innerHTML = "GARDEN SPRITZ";
+    document.getElementById('tea').style.background='#FFFFFF';
+    document.getElementById('field').style.background='#FFFFFF';
+    document.getElementById('golden').style.background='#FFFFFF';
+    document.getElementById('punch').style.background='#FFFFFF';
+    document.getElementById('six').style.background='#FFFFFF';
+    document.getElementById('Pontoosuc').style.background='#FFFFFF';
+    document.getElementById('cosno').style.background='#FFFFFF';
+    document.getElementById('spritz').style.background='#CCFFCC';
+    document.getElementById('pina').style.background='#FFFFFF';
+    document.getElementById('rocks').style.background='#FFFFFF';
+    document.getElementById('Highball').style.background='#FFFFFF';
+    document.getElementById('coupe').style.background='#FFFFFF';
+    document.getElementById('Snifter').style.background='#FFFFFF';
+    document.getElementById('mezcal').style.background='#FFFFFF';
+    document.getElementById('Johnny Walker Red').style.background='#FFFFFF';
+    document.getElementById('Tea Bully Boy Gin').style.background='#FFFFFF';
+    document.getElementById('Bully Boy Vodka').style.background='#FFFFFF';
+    document.getElementById('Demerara Rum 44').style.background='#FFFFFF';
+    document.getElementById('Bully Boy whiskey').style.background='#FFFFFF';
+    document.getElementById('Seedlip 42 (Citrus)').style.background='#FFFFFF';
+    document.getElementById('Seedlip 108 (Herbal)').style.background='#FFFFFF';
+    document.getElementById('demerara').style.background='#FFFFFF';
+    document.getElementById('Watermelon syrup').style.background='#FFFFFF';
+    document.getElementById('Rosemary syrup').style.background='#FFFFFF';
+    document.getElementById('Almond syrup').style.background='#FFFFFF';
+    document.getElementById('Vanilla bean syrup').style.background='#FFFFFF';
+    document.getElementById('Strawberry syrup').style.background='#FFFFFF';
+    document.getElementById('Agave syrup').style.background='#FFFFFF';
+    document.getElementById('Luxardo syrup').style.background='#FFFFFF';
+    document.getElementById('Passion fruit syrup').style.background='#FFFFFF';
+    document.getElementById('Lemon').style.background='#FFFFFF';
+    document.getElementById('Lime').style.background='#FFFFFF';
+    document.getElementById('Pama Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ancho Reyes').style.background='#FFFFFF';
+    document.getElementById('Mezcal').style.background='#FFFFFF';
+    document.getElementById('Apricot Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ginger liqueur').style.background='#FFFFFF';
+    document.getElementById('Allspice dram').style.background='#FFFFFF';
+    document.getElementById('Cointreau').style.background='#FFFFFF';
+    document.getElementById('Mint leaves').style.background='#FFFFFF';
+    document.getElementById('Basil leaves').style.background='#FFFFFF';
+    document.getElementById('Watermelon chunks').style.background='#FFFFFF';
+    document.getElementById('Cucumber').style.background='#FFFFFF';
+    document.getElementById('Pineapple chunks').style.background='#FFFFFF';
+    document.getElementById('Grapefruit bitters').style.background='#FFFFFF';
+    document.getElementById('Angostura bitters').style.background='#FFFFFF';
+    document.getElementById('Orange flower water').style.background='#FFFFFF';
+    document.getElementById('Pomegranate juice').style.background='#FFFFFF';
+    document.getElementById('Club soda').style.background='#FFFFFF';
+    document.getElementById('Coconut creme').style.background='#FFFFFF';
+    document.getElementById('Smoked salt').style.background='#FFFFFF';
+    document.getElementById('Mint leaf').style.background='#FFFFFF';
+    document.getElementById('Tajin').style.background='#FFFFFF';
+    document.getElementById('Grapefruit twist').style.background='#FFFFFF';
+    document.getElementById('Lemon wheel').style.background='#FFFFFF';
+    document.getElementById('Rosemary sprig').style.background='#FFFFFF';
+    document.getElementById('Basil leaf').style.background='#FFFFFF';
+    document.getElementById('Orange peel').style.background='#FFFFFF';
+    document.getElementById('Smoking cinnamon').style.background='#FFFFFF';
+    document.getElementById('Sage leaf').style.background='#FFFFFF';
+    document.getElementById('Strawberry ice').style.background='#FFFFFF';
 }
 
 function Pina(){
+    count = 0;
     cock = 9;
     glass = 4;
+    sweet = 8;
+    ing = 4;
     let curr = document.getElementById('current');
-    curr.innerHTML = "PIÑA SABROSA";
+    curr.innerHTML = "PIÑA SABROSA -- BLEND w/ 1 cup ICE";
+    document.getElementById('tea').style.background='#FFFFFF';
+    document.getElementById('field').style.background='#FFFFFF';
+    document.getElementById('golden').style.background='#FFFFFF';
+    document.getElementById('punch').style.background='#FFFFFF';
+    document.getElementById('six').style.background='#FFFFFF';
+    document.getElementById('Pontoosuc').style.background='#FFFFFF';
+    document.getElementById('cosno').style.background='#FFFFFF';
+    document.getElementById('spritz').style.background='#FFFFFF';
+    document.getElementById('pina').style.background='#CCFFCC';
+    document.getElementById('rocks').style.background='#FFFFFF';
+    document.getElementById('Highball').style.background='#FFFFFF';
+    document.getElementById('coupe').style.background='#FFFFFF';
+    document.getElementById('Snifter').style.background='#FFFFFF';
+    document.getElementById('mezcal').style.background='#FFFFFF';
+    document.getElementById('Johnny Walker Red').style.background='#FFFFFF';
+    document.getElementById('Tea Bully Boy Gin').style.background='#FFFFFF';
+    document.getElementById('Bully Boy Vodka').style.background='#FFFFFF';
+    document.getElementById('Demerara Rum 44').style.background='#FFFFFF';
+    document.getElementById('Bully Boy whiskey').style.background='#FFFFFF';
+    document.getElementById('Seedlip 42 (Citrus)').style.background='#FFFFFF';
+    document.getElementById('Seedlip 108 (Herbal)').style.background='#FFFFFF';
+    document.getElementById('demerara').style.background='#FFFFFF';
+    document.getElementById('Watermelon syrup').style.background='#FFFFFF';
+    document.getElementById('Rosemary syrup').style.background='#FFFFFF';
+    document.getElementById('Almond syrup').style.background='#FFFFFF';
+    document.getElementById('Vanilla bean syrup').style.background='#FFFFFF';
+    document.getElementById('Strawberry syrup').style.background='#FFFFFF';
+    document.getElementById('Agave syrup').style.background='#FFFFFF';
+    document.getElementById('Luxardo syrup').style.background='#FFFFFF';
+    document.getElementById('Passion fruit syrup').style.background='#FFFFFF';
+    document.getElementById('Lemon').style.background='#FFFFFF';
+    document.getElementById('Lime').style.background='#FFFFFF';
+    document.getElementById('Pama Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ancho Reyes').style.background='#FFFFFF';
+    document.getElementById('Mezcal').style.background='#FFFFFF';
+    document.getElementById('Apricot Liqueur').style.background='#FFFFFF';
+    document.getElementById('Ginger liqueur').style.background='#FFFFFF';
+    document.getElementById('Allspice dram').style.background='#FFFFFF';
+    document.getElementById('Cointreau').style.background='#FFFFFF';
+    document.getElementById('Mint leaves').style.background='#FFFFFF';
+    document.getElementById('Basil leaves').style.background='#FFFFFF';
+    document.getElementById('Watermelon chunks').style.background='#FFFFFF';
+    document.getElementById('Cucumber').style.background='#FFFFFF';
+    document.getElementById('Pineapple chunks').style.background='#FFFFFF';
+    document.getElementById('Grapefruit bitters').style.background='#FFFFFF';
+    document.getElementById('Angostura bitters').style.background='#FFFFFF';
+    document.getElementById('Orange flower water').style.background='#FFFFFF';
+    document.getElementById('Pomegranate juice').style.background='#FFFFFF';
+    document.getElementById('Club soda').style.background='#FFFFFF';
+    document.getElementById('Coconut creme').style.background='#FFFFFF';
+    document.getElementById('Smoked salt').style.background='#FFFFFF';
+    document.getElementById('Mint leaf').style.background='#FFFFFF';
+    document.getElementById('Tajin').style.background='#FFFFFF';
+    document.getElementById('Grapefruit twist').style.background='#FFFFFF';
+    document.getElementById('Lemon wheel').style.background='#FFFFFF';
+    document.getElementById('Rosemary sprig').style.background='#FFFFFF';
+    document.getElementById('Basil leaf').style.background='#FFFFFF';
+    document.getElementById('Orange peel').style.background='#FFFFFF';
+    document.getElementById('Smoking cinnamon').style.background='#FFFFFF';
+    document.getElementById('Sage leaf').style.background='#FFFFFF';
+    document.getElementById('Strawberry ice').style.background='#FFFFFF';
 
 }
 function Rocks(){
     if (glass == 1){
-        alert("yes");
+        document.getElementById('rocks').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -248,7 +828,12 @@ function Rocks(){
 
 function Highball(){
     if (glass == 2){
-        alert("yes");
+        document.getElementById('Highball').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -256,7 +841,12 @@ function Highball(){
 }
 function Coupe(){
     if (glass == 3){
-        alert("yes");
+        document.getElementById('coupe').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -265,7 +855,12 @@ function Coupe(){
 
 function Snifter(){
     if (glass == 4){
-        alert("yes");
+        document.getElementById('Snifter').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -274,7 +869,12 @@ function Snifter(){
 
 function Mezcal(){
     if (base == 1){
-        alert("yes");
+        document.getElementById('mezcal').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -283,7 +883,12 @@ function Mezcal(){
 
 function JWR(){
     if (base == 2){
-        alert("yes");
+        document.getElementById('Johnny Walker Red').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -292,7 +897,12 @@ function JWR(){
 
 function TGin(){
     if (base == 3){
-        alert("yes");
+        document.getElementById('Tea Bully Boy Gin').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -301,7 +911,12 @@ function TGin(){
 
 function BBV(){
     if (base == 4){
-        alert("yes");
+        document.getElementById('Bully Boy Vodka').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -310,7 +925,12 @@ function BBV(){
 
 function DemRum(){
     if (base == 5){
-        alert("yes");
+        document.getElementById('Demerara Rum 44').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -319,7 +939,12 @@ function DemRum(){
 
 function BBW(){
     if (base == 6){
-        alert("yes");
+        document.getElementById('Bully Boy whiskey').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -328,7 +953,12 @@ function BBW(){
 
 function SLC(){
     if (base == 7){
-        alert("yes");
+        document.getElementById('Seedlip 42 (Citrus)').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -337,7 +967,12 @@ function SLC(){
 
 function SLH(){
     if (base == 8){
-        alert("yes");
+        document.getElementById('Seedlip 108 (Herbal)').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -346,7 +981,12 @@ function SLH(){
 
 function Dem(){
     if (sweet == 1){
-        alert("yes");
+        document.getElementById('demerara').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -355,7 +995,12 @@ function Dem(){
 
 function WMS(){
     if (sweet == 2){
-        alert("yes");
+        document.getElementById('Watermelon syrup').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -364,7 +1009,12 @@ function WMS(){
 
 function Rosemary(){
     if (sweet == 3){
-        alert("yes");
+        document.getElementById('Rosemary syrup').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        };
     }
     else{
         alert("nope");
@@ -373,7 +1023,13 @@ function Rosemary(){
 
 function Almond(){
     if (sweet == 4){
-        alert("yes");
+        document.getElementById('Almond syrup').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -382,7 +1038,13 @@ function Almond(){
 
 function Vanilla(){
     if (sweet == 5){
-        alert("yes");
+        document.getElementById('Vanilla bean syrup').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -391,7 +1053,13 @@ function Vanilla(){
 
 function Strawberry(){
     if (sweet == 6){
-        alert("yes");
+        document.getElementById('Strawberry syrup').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -400,7 +1068,13 @@ function Strawberry(){
 
 function Agave(){
     if (sweet == 7){
-        alert("yes");
+        document.getElementById('Agave syrup').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -409,7 +1083,13 @@ function Agave(){
 
 function Luxardo(){
     if (sweet == 8){
-        alert("yes");
+        document.getElementById('Luxardo syrup').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -418,7 +1098,13 @@ function Luxardo(){
 
 function Passion(){
     if (sweet == 5){
-        alert("yes");
+        document.getElementById('Passion fruit syrup').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -427,7 +1113,13 @@ function Passion(){
 
 function Lemon(){
     if (citrus == 1){
-        alert("yes");
+        document.getElementById('Lemon').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -436,7 +1128,13 @@ function Lemon(){
 
 function Lime(){
     if (citrus == 2){
-        alert("yes");
+        document.getElementById('Lime').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -445,7 +1143,13 @@ function Lime(){
 
 function Pama(){
     if (cock == 6){
-        alert("yes");
+        document.getElementById('Pama Liqueur').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -454,7 +1158,13 @@ function Pama(){
 
 function AR(){
     if (cock == 6){
-        alert("yes");
+        document.getElementById('Ancho Reyes').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -463,7 +1173,13 @@ function AR(){
 
 function Mez(){
     if (cock == 3){
-        alert("yes");
+        document.getElementById('Mezcal').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -472,7 +1188,13 @@ function Mez(){
 
 function Apricot(){
     if (cock == 1){
-        alert("yes");
+        document.getElementById('Apricot Liqueur').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -481,7 +1203,13 @@ function Apricot(){
 
 function Ginger(){
     if (cock == 5){
-        alert("yes");
+        document.getElementById('Ginger liqueur').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -490,7 +1218,13 @@ function Ginger(){
 
 function Allspice(){
     if (cock == 4){
-        alert("yes");
+        document.getElementById('Allspice dram').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+
+        }
     }
     else{
         alert("nope");
@@ -499,7 +1233,12 @@ function Allspice(){
 
 function Cointreau(){
     if (cock == 2){
-        alert("yes");
+        document.getElementById('Cointreau').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -508,7 +1247,13 @@ function Cointreau(){
 
 function MintA(){
     if (cock == 3){
-        alert("yes");
+        document.getElementById('Mint leaves').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+            
+        }
     }
     else{
         alert("nope");
@@ -517,7 +1262,12 @@ function MintA(){
 
 function BasilA(){
     if (cock == 5){
-        alert("yes");
+        document.getElementById('Basil leaves').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -526,7 +1276,12 @@ function BasilA(){
 
 function WMC(){
     if (cock == 3){
-        alert("yes");
+        document.getElementById('Watermelon chunks').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -535,7 +1290,12 @@ function WMC(){
 
 function Cucumber(){
     if (cock == 8){
-        alert("yes");
+        document.getElementById('Cucumber').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -544,7 +1304,12 @@ function Cucumber(){
 
 function Pineapple(){
     if (cock == 9){
-        alert("yes");
+        document.getElementById('Pineapple chunks').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -553,7 +1318,12 @@ function Pineapple(){
 
 function GFB(){
     if (cock == 2){
-        alert("yes");
+        document.getElementById('Grapefruit bitters').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -562,7 +1332,12 @@ function GFB(){
 
 function Angostura(){
     if (cock == 3 || cock == 9){
-        alert("yes");
+        document.getElementById('Angostura bitters').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -571,7 +1346,12 @@ function Angostura(){
 
 function OFW(){
     if (cock == 7){
-        alert("yes");
+        document.getElementById('Orange flower water').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');            
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -580,7 +1360,12 @@ function OFW(){
 
 function Pom(){
     if (cock == 7){
-        alert("yes");
+        document.getElementById('Pomegranate juice').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -589,7 +1374,12 @@ function Pom(){
 
 function Soda(){
     if (cock == 3 || cock == 2){
-        alert("yes");
+        document.getElementById('Club soda').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -598,7 +1388,12 @@ function Soda(){
 
 function Coco(){
     if (cock == 9){
-        alert("yes");
+        document.getElementById('Coconut creme').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -607,7 +1402,12 @@ function Coco(){
 
 function SS(){
     if (cock == 8){
-        alert("yes");
+        document.getElementById('Smoked salt').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -616,7 +1416,12 @@ function SS(){
 
 function MintB(){
     if (cock == 3){
-        alert("yes");
+        document.getElementById('Mint leaf').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -625,7 +1430,12 @@ function MintB(){
 
 function Tajin(){
     if (cock == 6){
-        alert("yes");
+        document.getElementById('Tajin').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -634,7 +1444,12 @@ function Tajin(){
 
 function Grapefruit(){
     if (cock ==6){
-        alert("yes");
+        document.getElementById('Grapefruit twist').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -643,7 +1458,12 @@ function Grapefruit(){
 
 function LemonW(){
     if (cock == 3){
-        alert("yes");
+        document.getElementById('Lemon wheel').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -652,7 +1472,12 @@ function LemonW(){
 
 function RoseSprig(){
     if (cock == 1){
-        alert("yes");
+        document.getElementById('Rosemary sprig').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        };
     }
     else{
         alert("nope");
@@ -661,7 +1486,12 @@ function RoseSprig(){
 
 function BasilB(){
     if (cock == 5){
-        alert("yes");
+        document.getElementById('Basil leaf').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -670,7 +1500,12 @@ function BasilB(){
 
 function Orange(){
     if (cock == 4){
-        alert("yes");
+        document.getElementById('Orange peel').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -679,7 +1514,12 @@ function Orange(){
 
 function Cinnamon(){
     if (cock == 4){
-        alert("yes");
+        document.getElementById('Smoking cinnamon').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -688,7 +1528,12 @@ function Cinnamon(){
 
 function Sage(){
     if (cock == 2){
-        alert("yes");
+        document.getElementById('Sage leaf').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
@@ -697,12 +1542,19 @@ function Sage(){
 
 function SI(){
     if (cock == 2){
-        alert("yes");
+        document.getElementById('Strawberry ice').style.background='#CCFFCC';
+        count++;
+        if (count > ing){
+            alert('done');
+            count = 0;
+        }
     }
     else{
         alert("nope");
     }
 }
+
+
 
 
 
