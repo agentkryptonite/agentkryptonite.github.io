@@ -154,6 +154,7 @@ var citrus = 0;
 var sweet = 0;
 var count = 0;
 var ing = 0;
+var curr = document.getElementById('current');
 
 function Tea() {
     count = 0;
@@ -163,7 +164,6 @@ function Tea() {
     citrus = 2;
     sweet = 3;
     ing = 5;
-    let curr = document.getElementById('current');
     curr.innerHTML = "TEA WITH HARRIET";
     document.getElementById('tea').style.background='#CCFFCC';
     document.getElementById('field').style.background='#FFFFFF';
@@ -815,6 +815,7 @@ function Rocks(){
     if (glass == 1){
         document.getElementById('rocks').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- Rocks';
         if (count > ing){
             alert('done');
             count = 0;
@@ -829,6 +830,7 @@ function Highball(){
     if (glass == 2){
         document.getElementById('Highball').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- Highball';
         if (count > ing){
             alert('done');
             count = 0;
@@ -842,20 +844,7 @@ function Coupe(){
     if (glass == 3){
         document.getElementById('coupe').style.background='#CCFFCC';
         count++;
-        if (count > ing){
-            alert('done');
-            count = 0;
-        }
-    }
-    else{
-        alert("nope");
-    }
-}
-
-function Snifter(){
-    if (glass == 4){
-        document.getElementById('Snifter').style.background='#CCFFCC';
-        count++;
+        curr.innerHTML+=' -- Coupe';
         if (count > ing){
             alert('done');
             count = 0;
@@ -872,6 +861,7 @@ function Mezcal(){
         if (amount == 1){
             document.getElementById('mezcal').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- 1oz Mezcal';
         }
         else {
             alert("Try again");
@@ -892,6 +882,7 @@ function JWR(){
         if (amount == 1.5){
             document.getElementById('Johnny Walker Red').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- 1.5oz Johnny Walker Red';
         }
             else {
             alert("Try again");
@@ -911,6 +902,7 @@ function TGin(){
         var amount = prompt("How much?");
         if (amount == 2){
             document.getElementById('Tea Bully Boy Gin').style.background='#CCFFCC';
+            curr.innerHTML+=' -- 2oz Tea Bully Boy Gin';
             count++;
         }
             else {
@@ -932,6 +924,7 @@ function BBV(){
         if (amount == 1.5){
             document.getElementById('Bully Boy Vodka').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- 1.5oz Bully Boy Vodka';
         }
             else {
                 alert("Try again");
@@ -952,6 +945,7 @@ function DemRum(){
         if (amount == 2){
             document.getElementById('Demerara Rum 44').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- 2oz Demerara Rum 44';
         }
             else {
                 alert("Try again");
@@ -972,6 +966,7 @@ function BBW(){
         if (amount == 2){
             document.getElementById('Bully Boy whiskey').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- 2oz Bully Boy whiskey';
         }
         else {
                 alert("Try again");
@@ -992,6 +987,7 @@ function SLC(){
         if (amount == 2){
             document.getElementById('Seedlip 42 (Citrus)').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- 2 oz Seedlip 42 (Citrus)';
         }
         else {
                 alert("Try again");
@@ -1012,6 +1008,7 @@ function SLH(){
         if (amount == 2){
             document.getElementById('Seedlip 108 (Herbal)').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- 2 oz Seedlip 108 (Herbal)';
         }
         else {
                 alert("Try again");
@@ -1032,6 +1029,7 @@ function Dem(){
         if (amount == .5){
             document.getElementById('demerara').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- .5 oz Demerara syrup';
         }
         else {
                 alert("Try again");
@@ -1052,6 +1050,7 @@ function WMS(){
         if (amount == 1){
             document.getElementById('Watermelon syrup').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- 1 oz Watermelon syrup';
         }
         else {
                 alert("Try again");
@@ -1071,6 +1070,7 @@ function Rosemary(){
         var amount = prompt("How much?");
         if (amount == .75){
             document.getElementById('Rosemary syrup').style.background='#CCFFCC';
+            curr.innerHTML+=' -- .75oz Rosemary syrup';
             count++;
         }
         else {
@@ -1092,6 +1092,7 @@ function Almond(){
         if (amount == .25){
             document.getElementById('Almond syrup').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- .25 oz Almond syrup';
         }
         else {
                 alert("Try again");
@@ -1113,6 +1114,7 @@ function Vanilla(){
         if (amount == .5){
             document.getElementById('Vanilla bean syrup').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- .5oz Vanilla bean syrup';
         }
         else {
                 alert("Try again");
@@ -1134,6 +1136,7 @@ function Strawberry(){
         if (amount == .5){
             document.getElementById('Strawberry syrup').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- .5oz Strawberry syrup';
         }
         else {
                 alert("Try again");
@@ -1155,6 +1158,7 @@ function Agave(){
         if (amount == 1){
             document.getElementById('Agave syrup').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- 1oz Agave syrup';
         }
         else {
                 alert("Try again");
@@ -1176,6 +1180,7 @@ function Luxardo(){
         if (amount == .5){
             document.getElementById('Luxardo syrup').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- .5oz Luxardo syrup';
         }
         else {
                 alert("Try again");
@@ -1197,6 +1202,7 @@ function Passion(){
         if (amount == .5){
             document.getElementById('Passion fruit syrup').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- .5oz Passion fruit';
         }
         else {
                 alert("Try again");
@@ -1215,10 +1221,16 @@ function Passion(){
 function Lemon(){
     if (citrus == 1){
         var amount = prompt("How much?");
-        if ((cock==6 && amount==.75) || (cock==3 && amount==1)){
+        if (cock==6 && amount==.75) {
             document.getElementById('Lemon').style.background='#CCFFCC';
             count++;
-        } 
+            curr.innerHTML+=' -- .75oz Lemon';
+        }
+        else if (cock==3 && amount==1) {
+            document.getElementById('Lemon').style.background='#CCFFCC';
+            count++;
+            curr.innerHTML+=' -- 1oz Lemon';
+        }
         else {
                 alert("Try again");
             }
@@ -1239,9 +1251,11 @@ function Lime(){
         if ((cock==7 || cock==8) && amount==.5){
             document.getElementById('Lime').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- .5oz Lime';
         }
         else if ((cock == 1 || cock == 2 || cock == 4 || cock == 5 || cock == 6) && amount ==.75){
             document.getElementById('Lime').style.background='#CCFFCC';
+            curr.innerHTML+=' -- .75oz Lime';
             count++;
         }
         else {
@@ -1264,6 +1278,7 @@ function Pama(){
         if (amount==1){
             document.getElementById('Pama Liqueur').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- 1oz Pama Liqueur';
         }
         else {
                 alert("Try again");
@@ -1285,6 +1300,7 @@ function AR(){
         if (amount==1){
             document.getElementById('Ancho Reyes').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- 1oz Ancho Reyes';
         }
         else {
                 alert("Try again");
@@ -1306,6 +1322,7 @@ function Mez(){
         if (amount==.5){
             document.getElementById('Mezcal').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- .5oz Mezcal';
         }
         else {
                 alert("Try again");
@@ -1326,6 +1343,7 @@ function Apricot(){
         var amount = prompt("How much?");
         if (amount==.5){
             document.getElementById('Apricot Liqueur').style.background='#CCFFCC';
+            curr.innerHTML+=' -- .5oz Apricot Liqueur';
             count++;
         }
         else {
@@ -1348,6 +1366,7 @@ function Ginger(){
         if (amount==.75){
         document.getElementById('Ginger liqueur').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- .75oz Ginger Liqueur';
         }
         else {
                 alert("Try again");
@@ -1369,6 +1388,7 @@ function Allspice(){
         if (amount==.5){
             document.getElementById('Allspice dram').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- .5oz Allspice dram';
         }
         else {
                 alert("Try again");
@@ -1390,6 +1410,7 @@ function Cointreau(){
         if (amount==.5){
             document.getElementById('Cointreau').style.background='#CCFFCC';
             count++;
+            curr.innerHTML+=' -- .5oz Cointreau';
         }
         else {
                 alert("Try again");
@@ -1408,9 +1429,11 @@ function MintA(){
     if (cock == 3){
         document.getElementById('Mint leaves').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- muddled mint leaves';
         if (count > ing){
             alert('done');
             count = 0;
+            
             
         }
     }
@@ -1423,6 +1446,7 @@ function BasilA(){
     if (cock == 5){
         document.getElementById('Basil leaves').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- muddled basil leaves';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1437,6 +1461,7 @@ function WMC(){
     if (cock == 3){
         document.getElementById('Watermelon chunks').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- watermelon chunks';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1451,6 +1476,7 @@ function Cucumber(){
     if (cock == 8){
         document.getElementById('Cucumber').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- muddled cucumber';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1461,24 +1487,12 @@ function Cucumber(){
     }
 }
 
-function Pineapple(){
-    if (cock == 9){
-        document.getElementById('Pineapple chunks').style.background='#CCFFCC';
-        count++;
-        if (count > ing){
-            alert('done');
-            count = 0;
-        }
-    }
-    else{
-        alert("nope");
-    }
-}
 
 function GFB(){
     if (cock == 2){
         document.getElementById('Grapefruit bitters').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- grapefruit bitters';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1490,9 +1504,10 @@ function GFB(){
 }
 
 function Angostura(){
-    if (cock == 3 || cock == 9){
+    if ((cock == 3) || (cock == 9)){
         document.getElementById('Angostura bitters').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- Angostura bitters';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1507,6 +1522,7 @@ function OFW(){
     if (cock == 7){
         document.getElementById('Orange flower water').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- orange flower water';
         if (count > ing){
             alert('done');            
             count = 0;
@@ -1521,6 +1537,7 @@ function Pom(){
     if (cock == 7){
         document.getElementById('Pomegranate juice').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- 1oz pomegranate juice ';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1535,20 +1552,7 @@ function Soda(){
     if (cock == 3 || cock == 2){
         document.getElementById('Club soda').style.background='#CCFFCC';
         count++;
-        if (count > ing){
-            alert('done');
-            count = 0;
-        }
-    }
-    else{
-        alert("nope");
-    }
-}
-
-function Coco(){
-    if (cock == 9){
-        document.getElementById('Coconut creme').style.background='#CCFFCC';
-        count++;
+        curr.innerHTML+=' -- club soda';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1563,6 +1567,7 @@ function SS(){
     if (cock == 8){
         document.getElementById('Smoked salt').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- smoked salt';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1577,6 +1582,7 @@ function MintB(){
     if (cock == 3){
         document.getElementById('Mint leaf').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- Mint leaf';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1591,6 +1597,7 @@ function Tajin(){
     if (cock == 6){
         document.getElementById('Tajin').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- Tajin rim';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1605,6 +1612,7 @@ function Grapefruit(){
     if (cock ==6){
         document.getElementById('Grapefruit twist').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- grapefruit twist';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1619,6 +1627,7 @@ function LemonW(){
     if (cock == 3){
         document.getElementById('Lemon wheel').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- lemon wheel';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1633,6 +1642,7 @@ function RoseSprig(){
     if (cock == 1){
         document.getElementById('Rosemary sprig').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- Rosemary sprig';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1647,6 +1657,7 @@ function BasilB(){
     if (cock == 5){
         document.getElementById('Basil leaf').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- Basil leaf';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1661,6 +1672,7 @@ function Orange(){
     if (cock == 4){
         document.getElementById('Orange peel').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- orange peel';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1675,6 +1687,7 @@ function Cinnamon(){
     if (cock == 4){
         document.getElementById('Smoking cinnamon').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- smoking cinnamon';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1689,6 +1702,7 @@ function Sage(){
     if (cock == 2){
         document.getElementById('Sage leaf').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- sage leaf';
         if (count > ing){
             alert('done');
             count = 0;
@@ -1703,6 +1717,7 @@ function SI(){
     if (cock == 2){
         document.getElementById('Strawberry ice').style.background='#CCFFCC';
         count++;
+        curr.innerHTML+=' -- strawberry ice';
         if (count > ing){
             alert('done');
             count = 0;
